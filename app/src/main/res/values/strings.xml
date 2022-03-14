@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Notification App</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="new_notification">Create new notification</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="notification_titile">You create a notification</string>
+    <string name="notification_text">Notification </string>
+    <string name="app_notification">App notification</string>
+    <string name="notification_description">notification description</string>
+</resources>
