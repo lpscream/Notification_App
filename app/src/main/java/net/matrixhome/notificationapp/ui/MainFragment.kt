@@ -48,8 +48,6 @@ class MainFragment : Fragment(), ViewPagerAdapter.ButtonClickListener {
                 Log.d(TAG, "onViewCreated: cycle ${pageNum}")
                 pageNum = -1
             }
-
-
         })
     }
 

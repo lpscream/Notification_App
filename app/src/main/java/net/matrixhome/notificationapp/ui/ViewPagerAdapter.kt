@@ -10,8 +10,6 @@ import androidx.recyclerview.widget.RecyclerView
 import net.matrixhome.notificationapp.R
 import net.matrixhome.notificationapp.model.PageRoom
 
-const val PAGE_NUMBER = "page_number"
-
 class ViewPagerAdapter(private val itemClickListener: ButtonClickListener
 ): RecyclerView.Adapter<ViewPagerAdapter.ViewHolder>() {
 
