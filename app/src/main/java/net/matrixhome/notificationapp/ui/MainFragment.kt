@@ -17,7 +17,6 @@ import net.matrixhome.notificationapp.R
 
 class MainFragment : Fragment(), ViewPagerAdapter.ButtonClickListener {
 
-    private val TAG = "MainFragment_log"
     private lateinit var pagerAdapter: ViewPagerAdapter
     private lateinit var viewPager: ViewPager2
     private lateinit var notification: AppNotification
@@ -41,11 +40,12 @@ class MainFragment : Fragment(), ViewPagerAdapter.ButtonClickListener {
         notification = AppNotification(requireContext())
         pageNum = arguments?.getString(FRAGMENT_ID)?.toInt()
         viewModel.pages.observe(requireActivity(), Observer {
-            pagerAdapter.update(it)
+            if (savedInstanceState == null){
+                pagerAdapter.update(it)
+            }
             if (pageNum != null && pageNum != -1){
                 pageNum = pageNum!! - 1
                 viewPager.setCurrentItem(pageNum!!, false)
-                Log.d(TAG, "onViewCreated: cycle ${pageNum}")
                 pageNum = -1
             }
         })
